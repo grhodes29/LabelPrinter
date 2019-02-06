@@ -23,8 +23,9 @@
         static void Main(string[] args)
         {
 
+            Letter.Printer();
 
-
+            Console.ReadKey();
         }
 
 
