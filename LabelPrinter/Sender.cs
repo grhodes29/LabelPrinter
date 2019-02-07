@@ -11,7 +11,7 @@ namespace LabelPrinter
 
     /// <summary>
     /// AUTHOR: Giancarlo Rhodes
-    /// DESCRIPTION: 
+    /// DESCRIPTION: add description
     /// COMPANY: Onshore Outsourcing https://www.onshoreoutsourcing.com/
     /// </summary>
     public class Sender
