@@ -18,11 +18,11 @@ namespace LabelPrinter
     internal class Letter
     {
 
+        
+
 
         /// <summary>
-        /// AUTHOR: Giancarlo Rhodes
         /// DESCRIPTION: 
-        /// COMPANY: Onshore Outsourcing https://www.onshoreoutsourcing.com/
         /// </summary>
         internal static void Printer()
         {

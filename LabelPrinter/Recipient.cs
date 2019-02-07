@@ -1,4 +1,6 @@
-﻿namespace LabelPrinter
+﻿
+
+namespace LabelPrinter
 {
 
     using System;
@@ -7,29 +9,30 @@
     using System.Text;
     using System.Threading.Tasks;
 
+    
 
     /// <summary>
     /// AUTHOR: Giancarlo Rhodes
-    /// DESCRIPTION: add description
+    /// DESCRIPTION: used in the who will receive the package or letter
     /// COMPANY: Onshore Outsourcing https://www.onshoreoutsourcing.com/
     /// </summary>
-    public class Sender
+    public class Recipient
     {
-        public string FullName {get; set;}
+
+        public string FullName { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
-        public string Zip { get; set; }
+        public int Zip { get; set; }
 
 
         /// <summary>
         /// DESCRIPTION: constructor that takes a dictonary and builds the oject with all it's properties filled.
         /// </summary>
-        /// <param name="inData"></param>
-        public Sender(Dictionary<string, string> inData)
-        {
+        /// <param name="data"></param>
+        public Recipient(Dictionary<string, string> data) {
 
-            foreach (var item in inData)
+            foreach (var item in data)
             {
                 if (item.Key == "FirstName")
                 {
@@ -37,6 +40,7 @@
                 }
                 else if (item.Key == "Address")
                 {
+
                     this.Address = item.Value;
                 }
                 else if (item.Key == "City")
@@ -51,7 +55,7 @@
                 }
                 else if (item.Key == "Zip")
                 {
-                    this.Zip = item.Value;
+                    this.Zip = Convert.ToInt32(item.Value);
                 }
             }
 
