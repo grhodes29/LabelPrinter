@@ -57,6 +57,41 @@
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public Sender() {
+
+            CollectInfo();
+
+        }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void CollectInfo()
+        {
+
+            Console.WriteLine("What is the sender's Full Name?");
+            this.FullName = Console.ReadLine();
+
+            Console.WriteLine("What is the sender's Address");
+            this.Address = Console.ReadLine();
+
+            Console.WriteLine("What is the sender's City");
+            this.City = Console.ReadLine();
+
+            Console.WriteLine("What is the sender's State");
+            this.State = Console.ReadLine();
+
+            Console.WriteLine("What is the sender's Zip");
+            this.Zip = Console.ReadLine();
+
+
+        }
+
 
     }
 }

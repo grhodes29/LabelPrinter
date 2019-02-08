@@ -23,7 +23,7 @@ namespace LabelPrinter
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
-        public int Zip { get; set; }
+        public string Zip { get; set; }
 
 
         /// <summary>
@@ -55,11 +55,13 @@ namespace LabelPrinter
                 }
                 else if (item.Key == "Zip")
                 {
-                    this.Zip = Convert.ToInt32(item.Value);
+                    this.Zip = item.Value;
                 }
             }
 
         }
+
+      
 
 
     }

@@ -20,7 +20,6 @@ namespace LabelPrinter
 
         
 
-
         /// <summary>
         /// DESCRIPTION: 
         /// </summary>
@@ -52,6 +51,40 @@ namespace LabelPrinter
             Console.WriteLine("            |                                                                                                                                        |");
             Console.WriteLine("            |                                                                                                                                        |");
             Console.WriteLine("            ------------------------------------------------------------------------------------------------------------------------------------------");
+          
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="r"></param>
+        /// <param name="ceilingBuffer"></param>
+        /// <param name="leftMartinBuffer"></param>
+        /// <param name="lineLength"></param>
+        internal static void Printer(Sender s, Recipient r, int ceilingBuffer, int leftMartinBuffer, int lineLength)
+        {
+
+            // add the header space
+            for (int i = 0; i < ceilingBuffer; i++)
+            {
+                Console.WriteLine("");
+            }
+
+            // build the header
+            string _header = "";
+            for (int i = 0; i < leftMartinBuffer; i++)
+            {
+                _header = _header + " ";
+            }
+            for (int i = 0; i < lineLength; i++)
+            {
+                _header =_header + "-";
+            }
+            // print the header
+            Console.WriteLine(_header);
+
         }
     }
 }
