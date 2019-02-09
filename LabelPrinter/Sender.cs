@@ -56,7 +56,7 @@
         }
 
         /// <summary>
-        /// 
+        /// DESCRIPTIOIN: constructor that get gets the basic information
         /// </summary>
         public Sender() {
 
@@ -67,7 +67,7 @@
 
 
         /// <summary>
-        /// 
+        /// DESCRIPTION: get the information using this method
         /// </summary>
         private void CollectInfo()
         {
