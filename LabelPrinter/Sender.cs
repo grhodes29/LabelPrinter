@@ -60,8 +60,7 @@
         /// </summary>
         public Sender() {
 
-            CollectInfo();
-
+            CollectInfo();       
         }
 
 
