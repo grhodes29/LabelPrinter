@@ -1,6 +1,4 @@
-﻿
-
-namespace LabelPrinter
+﻿namespace LabelPrinter
 {
 
     using System;
@@ -84,6 +82,21 @@ namespace LabelPrinter
             }
             // print the header
             Console.WriteLine(_header);
+
+
+
+            // build the footer
+            string _footer = "";
+            for (int i = 0; i < leftMartinBuffer; i++)
+            {
+                _footer = _footer + " ";
+            }
+            for (int i = 0; i < lineLength; i++)
+            {
+                _footer = _footer + "-";
+            }
+            // print the footer
+            Console.WriteLine(_footer);
 
         }
     }
