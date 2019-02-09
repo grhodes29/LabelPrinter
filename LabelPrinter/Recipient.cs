@@ -1,6 +1,4 @@
-﻿
-
-namespace LabelPrinter
+﻿namespace LabelPrinter
 {
 
     using System;
