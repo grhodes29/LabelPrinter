@@ -90,6 +90,7 @@
             for (int i = 0; i < leftMartinBuffer; i++)
             {
                 _footer = _footer + " ";
+
             }
             for (int i = 0; i < lineLength; i++)
             {
