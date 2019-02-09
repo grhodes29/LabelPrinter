@@ -21,7 +21,6 @@
         public string State { get; set; }
         public string Zip { get; set; }
 
-
         /// <summary>
         /// DESCRIPTION: constructor that takes a dictonary and builds the oject with all it's properties filled.
         /// </summary>
