@@ -19,7 +19,7 @@
         
 
         /// <summary>
-        /// DESCRIPTION: 
+        /// DESCRIPTION: this is static print example for class
         /// </summary>
         internal static void Printer()
         {
