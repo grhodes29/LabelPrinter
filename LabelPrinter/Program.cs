@@ -22,77 +22,72 @@
         static void Main(string[] args)
         {
 
-            // get sender information
-            Dictionary<string, string> _senderDict = new Dictionary<string, string>();
-            Dictionary<string, string> _recipientDict = new Dictionary<string, string>();
-            string _key, _value;
-
-            //Console.WriteLine("What is the sender's Full Name?");
-            //_key = "FullName";
-            //_value = Console.ReadLine();
-            //_senderDict.Add(_key, _value);
-
-            //Console.WriteLine("What is the sender's Address");
-            //_key = "Address";
-            //_value = Console.ReadLine();
-            //_senderDict.Add(_key, _value);
+            // Console.WriteLine("Do you want to send another letter  (yes or no)?");
+            Console.WriteLine("How many letters do you want to create (1 to 100 )?");
 
 
-            //Console.WriteLine("What is the sender's City");
-            //_key = "City";
-            //_value = Console.ReadLine();
-            //_senderDict.Add(_key, _value);
+            // collect their response here 
+            string _answer = Console.ReadLine();
+            // bool _boolAnswer = (_answer.ToLower().Trim() == "yes" ? true : false);
+            int _numberOfLetters;
+
+            bool _IsParsed = int.TryParse(_answer, out _numberOfLetters);
+
+            List<Letter> ListOfLetters = new List<Letter>();
+
+            // convert their response to boolean
+
+            //if (_answer.ToLower().Trim() == "yes")
+            //{
+            //    _boolAnswer = true;
+            //}
+            //else
+            //{
+            //    _boolAnswer = false;
+            //}
+
+            int counter = 0;
+            while (_IsParsed == true && counter < _numberOfLetters)
+            {
+                Sender sender = new Sender();
+                Recipient recip = new Recipient();
+                Letter _newLetter = new Letter(sender, recip);
+                ListOfLetters.Add(_newLetter);
+
+                //string _sFullName = "Jesus Christ";
+                //string _sAddress = "1109 Willowcreek Lane";
+                //string _sState = "MO";
+                //string _sCity = "Columbia";
+                //string _sZip = "65203";
+
+                // arrange
+                //Sender s = new Sender(_sFullName, _sAddress, _sState, _sCity, _sZip);
+               
+
+                //string _rFullName = "Bad Devil";
+                //string _rAddress = "345 Hotplace Ave.";
+                //string _rState = "NV";
+                //string _rCity = "Las Vegas";
+                //string _rZip = "23442";
+
+                //Recipient r = new Recipient(_rFullName, _rAddress, _rState, _rCity, _rZip);
+
+                Letter.Printer(sender, recip, 4, 12, 140);
+                //Letter.Printer();
+
+                // TODO: create a Printer that uses a List<>
 
 
-            //Console.WriteLine("What is the sender's State");
-            //_key = "State";
-            //_value = Console.ReadLine();
-            //_senderDict.Add(_key, _value);
 
-            //Console.WriteLine("What is the sender's Zip");
-            //_key = "Zip";
-            //_value = Console.ReadLine();
-            //_senderDict.Add(_key, _value);
+                //Console.WriteLine("Do you want to send another letter  (yes or no)?");
+                //_answer = Console.ReadLine().Trim().ToLower();
+                //_boolAnswer = (_answer == "yes" ? true : false);
 
-
-            //Sender s = new Sender(_senderDict);
-            Sender s = new Sender();
-
-            Console.WriteLine("What is the recipient's Full Name?");
-            _key = "FullName";
-            _value = Console.ReadLine();
-            _recipientDict.Add(_key, _value);
-
-            Console.WriteLine("What is the recipient's Address");
-            _key = "Address";
-            _value = Console.ReadLine();
-            _recipientDict.Add(_key, _value);
-
-
-            Console.WriteLine("What is the recipient's City");
-            _key = "City";
-            _value = Console.ReadLine();
-            _recipientDict.Add(_key, _value);
-
-
-            Console.WriteLine("What is the recipient's State");
-            _key = "State";
-            _value = Console.ReadLine();
-            _recipientDict.Add(_key, _value);
-
-            Console.WriteLine("What is the recipient's Zip");
-            _key = "Zip";
-            _value = Console.ReadLine();
-            _recipientDict.Add(_key, _value);
-
-
-            Recipient r = new Recipient(_recipientDict);
-
-
-            //Letter.Printer();
+                counter++;
+            }
 
             //TODO - need to implement
-            Letter.Printer(s, r, 2, 12, 160); 
+            //Letter.Printer(s, r, 2, 12, 160); 
 
             Console.ReadKey();
         }

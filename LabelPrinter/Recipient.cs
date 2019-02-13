@@ -1,13 +1,10 @@
 ﻿namespace LabelPrinter
 {
-
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-
-    
 
     /// <summary>
     /// AUTHOR: Giancarlo Rhodes
@@ -16,12 +13,48 @@
     /// </summary>
     public class Recipient
     {
-
         public string FullName { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
+
+        /// <summary>
+        /// DESCRIPTION: constructor with no arguments 
+        /// </summary>
+        public Recipient()
+        {
+            CollectInfo();
+        }
+
+        public Recipient(string inFullName, string inAddress, string inCity, string inState, string inZip)
+        {
+
+            this.FullName = inFullName;
+            this.Address = inAddress;
+            this.State = inCity;
+            this.City = inState;
+            this.Zip = inZip;
+
+        }
+
+        public void CollectInfo()
+        {
+            Console.WriteLine("What is the recipient's Full Name?");
+            FullName = Console.ReadLine();
+
+            Console.WriteLine("What is the recipient's Address");
+            Address = Console.ReadLine();
+
+            Console.WriteLine("What is the recipient's City");
+            City = Console.ReadLine();
+
+            Console.WriteLine("What is the recipient's State");
+            State = Console.ReadLine();
+
+            Console.WriteLine("What is the recipient's Zip");
+            Zip = Console.ReadLine();
+        }
 
 
         /// <summary>
@@ -60,7 +93,6 @@
         }
 
       
-
 
     }
 }

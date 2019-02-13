@@ -14,11 +14,24 @@
     /// </summary>
     public class Sender
     {
+        
+
         public string FullName {get; set;}
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
+
+       
+
+        /// <summary>
+        /// DESCRIPTIOIN: constructor that get gets the basic information
+        /// </summary>
+        public Sender() {
+
+            CollectInfo();
+        }
+
 
         /// <summary>
         /// DESCRIPTION: constructor that takes a dictonary and builds the oject with all it's properties filled.
@@ -55,12 +68,15 @@
 
         }
 
-        /// <summary>
-        /// DESCRIPTIOIN: constructor that get gets the basic information
-        /// </summary>
-        public Sender() {
 
-            CollectInfo();       
+
+        public Sender(string sFullName, string sAddress, string sState, string sCity, string sZip)
+        {
+            this.FullName = sFullName;
+            this.Address = sAddress;
+            this.State = sState;
+            this.City = sCity;
+            this.Zip = sZip;
         }
 
 
