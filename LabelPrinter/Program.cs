@@ -49,6 +49,9 @@
             int counter = 0;
             while (_IsParsed == true && counter < _numberOfLetters)
             {
+
+
+
                 Sender sender = new Sender();
                 Recipient recip = new Recipient();
                 Letter _newLetter = new Letter(sender, recip);
